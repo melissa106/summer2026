@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Summer 2026 — Izquierdo Family Trip Tracker</title>
+<style>
+  :root{
+    --booked:#1a7f4e; --booked-bg:#e3f4ea;
+    --missing:#c0392b; --missing-bg:#fdecea;
+    --check:#b07d00; --check-bg:#fff6dd;
+    --ink:#1f2430; --muted:#6b7280; --line:#e6e8ee;
+  }
+  *{box-sizing:border-box}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;margin:0;background:#f7f8fa;color:var(--ink);line-height:1.45}
+  .wrap{max-width:860px;margin:0 auto;padding:32px 20px 60px}
+  header{margin-bottom:8px}
+  h1{font-size:26px;margin:0 0 4px}
+  .sub{color:var(--muted);font-size:14px;margin-bottom:20px}
+  .summary{display:flex;gap:12px;flex-wrap:wrap;margin:18px 0 28px}
+  .pill{padding:8px 14px;border-radius:999px;font-size:13px;font-weight:600}
+  .pill.b{background:var(--booked-bg);color:var(--booked)}
+  .pill.m{background:var(--missing-bg);color:var(--missing)}
+  .pill.c{background:var(--check-bg);color:var(--check)}
+  .leg{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-bottom:14px}
+  .leg h2{font-size:17px;margin:0 0 2px}
+  .dates{color:var(--muted);font-size:13px;margin-bottom:12px}
+  table{width:100%;border-collapse:collapse;font-size:14px}
+  td{padding:7px 8px;border-top:1px solid var(--line);vertical-align:top}
+  tr:first-child td{border-top:none}
+  td.item{width:34%;font-weight:600}
+  td.status{width:16%;white-space:nowrap}
+  .tag{display:inline-block;padding:2px 10px;border-radius:999px;font-size:12px;font-weight:700}
+  .tag.booked{background:var(--booked-bg);color:var(--booked)}
+  .tag.missing{background:var(--missing-bg);color:var(--missing)}
+  .tag.check{background:var(--check-bg);color:var(--check)}
+  .note{color:var(--muted);font-size:13px}
+  footer{margin-top:26px;color:var(--muted);font-size:12px}
+  .travelers{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 20px;margin-bottom:22px;font-size:14px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Summer 2026 — Family Trip Tracker</h1>
+    <div class="sub">Miami → Madrid → Ibiza → Megève → Cannes → Miami &nbsp;·&nbsp; July 4 – 26, 2026 &nbsp;·&nbsp; Updated June 11, 2026</div>
+  </header>
+
+  <div class="travelers"><strong>Travelers (4):</strong> Melissa Aidaoui-Izquierdo, Franck Izquierdo, Monroe Izquierdo (child), Franca Izquierdo (child)</div>
+
+  <div class="summary">
+    <span class="pill b">✓ 8 Booked</span>
+    <span class="pill c">⚠ 2 To verify</span>
+    <span class="pill m">✗ 3 Missing</span>
+  </div>
+
+  <div class="leg">
+    <h2>1 · Miami → Madrid</h2>
+    <div class="dates">Depart Sat July 4 · Arrive Sun July 5</div>
+    <table>
+      <tr><td class="item">Flight MIA → MAD</td><td class="status"><span class="tag booked">Booked</span></td><td class="note">AA 8740 (operated by Iberia) · Sat Jul 4, 10:00 PM → Jul 5, 12:50 PM · Amex Travel conf <strong>IUYRVF</strong> (BA ref BMVWQZ).</td></tr>
+      <tr><td class="item">Madrid hotel (Jul 5–7)</td><td class="status"><span class="tag missing">Missing</span></td><td class="note">2 nights — no booking found.</td></tr>
+    </table>
+  </div>
+
+  <div class="leg">
+    <h2>2 · Madrid → Ibiza</h2>
+    <div class="dates">Tue July 7 – Sun July 12</div>
+    <table>
+      <tr><td class="item">Flight MAD → IBZ</td><td class="status"><span class="tag booked">Booked</span></td><td class="note">Iberia <strong>LTB09</strong> · IB1699 (Iberia Express) · Tue Jul 7, 15:50 · all 4 passengers · seats paid.</td></tr>
+      <tr><td class="item">Ibiza stay (Jul 7–12)</td><td class="status"><span class="tag booked">Booked</span></td><td class="note">Staying at Jean-Charles' apartment (friend) — 5 nights, nothing to book.</td></tr>
+    </table>
+  </div>
+
+  <div class="leg">
+    <h2>3 · Ibiza → Megève</h2>
+    <div class="dates">Sun July 12 – Thu July 16</div>
+    <table>
+      <tr><td class="item">Flight Ibiza → Geneva, Jul 12</td><td class="status"><span class="tag booked">Booked</span></td><td class="note">easyJet <strong>KCS6PP6</strong> · confirm date (Jul 12) and that all 4 passengers are on it.</td></tr>
+      <tr><td class="item">Transfer Geneva airport → Megève</td><td class="status"><span class="tag missing">Missing</span></td><td class="note">~1h15 drive — no car/driver booked.</td></tr>
+      <tr><td class="item">Hôtel Les Fermes de Marie, Megève</td><td class="status"><span class="tag booked">Booked</span></td><td class="note">Jul 12–16 (4 nights) · flexible rate · <strong>balance due before arrival</strong>.</td></tr>
+    </table>
+  </div>
+
+  <div class="leg">
+    <h2>4 · Megève → Cannes</h2>
+    <div class="dates">Thu July 16 – Sun July 26</div>
+    <table>
+      <tr><td class="item">Flight Geneva (T1) → Nice (T2)</td><td class="status"><span class="tag booked">Booked</span></td><td class="note">easyJet <strong>KCS6MRJ</strong> · confirm date (Jul 16) and that all 4 passengers are on it.</td></tr>
+      <tr><td class="item">Transfers: Megève → GVA · NCE → Cannes</td><td class="status"><span class="tag missing">Missing</span></td><td class="note">No ground transport booked on either end.</td></tr>
+      <tr><td class="item">Cannes stay (Jul 16–26)</td><td class="status"><span class="tag booked">Booked</span></td><td class="note">Rented house on Avenue Ziem — 10 nights.</td></tr>
+    </table>
+  </div>
+
+  <div class="leg">
+    <h2>5 · Return to Miami</h2>
+    <div class="dates">Sun July 26</div>
+    <table>
+      <tr><td class="item">Flight NCE → MIA</td><td class="status"><span class="tag booked">Booked</span></td><td class="note">AA 6743 (operated by British Airways) · Sun Jul 26, 12:10 PM → 8:10 PM · 1 stop (LHR) · conf <strong>IUYRVF</strong>.</td></tr>
+    </table>
+  </div>
+
+  <div class="leg">
+    <h2>Other</h2>
+    <table>
+      <tr><td class="item">Travel insurance</td><td class="status"><span class="tag check">To verify</span></td><td class="note">Prior Generali/CSA policy was for a canceled trip — confirm coverage for this one.</td></tr>
+      <tr><td class="item">Passports (kids incl.)</td><td class="status"><span class="tag check">To verify</span></td><td class="note">Verify all 4 valid 6+ months past July 26.</td></tr>
+    </table>
+  </div>
+
+  <footer>Booking references: Amex Travel IUYRVF (AA/Iberia/BA, ref BMVWQZ) · Iberia LTB09 · easyJet KCS6PP6 &amp; KCS6MRJ · Les Fermes de Marie (Asterio). Shareable — no personal payment info included.</footer>
+</div>
+</body>
+</html>
